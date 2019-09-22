@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "public_pages#index"
+
+  get '/', to: 'public_pages#show'
+  get '/about', to: 'public_pages#about'
+  get '/version', to: 'public_pages#version'
 end
